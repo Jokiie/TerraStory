@@ -1,8 +1,3 @@
-author = Jokie
-version = 1.03
 displayName = TerraStory
-buildIgnore = .vs\*, .git\*, .github\*
-hideCode = true
-hideResources = true
-modReferences = StructureHelper
-
+author = Jokiie
+version = 0.1

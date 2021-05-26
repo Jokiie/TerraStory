@@ -3,7 +3,6 @@
     "Terraria": {
       "commandName": "Executable",
       "executablePath": "$(tMLPath)",
-      "commandLineArgs": "WorldGen.KillWall(X, Y);",
       "workingDirectory": "$(TerrariaSteamPath)"
     },
     "TerrariaServer": {
