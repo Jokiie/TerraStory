@@ -54,3 +54,19 @@ Thanks to the Luggage pet mod, with the open source code, I could make possible 
 looting pet from Maplestory, with some changes & to the Tmodloader discord for answering some questions ! :)
 
 Jokie.
+
+
+----------------------------------------------------------------------
+Changelog
+
+May, 26, 2021
+
+-Moved some music from TerraStoryMusic pack2 to TerraStory , as an attempt to fix Ludibrium music 
+ not playing while raining or underground.
+
+
+---------------------------------------------------------------------
+ Knowns issues
+
+- Vanilla slimes have their animation buggued the first time you encounter them, but only the first 
+  slime of each type have this issue.

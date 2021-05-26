@@ -126,7 +126,7 @@ namespace TerraStory.NPCs
 				timer++;
 				if (timer > 120)
 				{
-					Projectile.NewProjectile(npc.Center.X, npc.Center.Y, direction.X, direction.Y, mod.ProjectileType("PixieP"), npc.damage / 3, 0f, Main.myPlayer, player.Center.X, player.Center.Y); // Our timer has finished, do something here:
+					Projectile.NewProjectile(npc.Center.X, npc.Center.Y, direction.X, direction.Y, mod.ProjectileType("PixieP"), npc.damage / 5, 0f, Main.myPlayer, player.Center.X, player.Center.Y); // Our timer has finished, do something here:
 																																																	   // Main.PlaySound, Dust.NewDust, Projectile.NewProjectile, etc. Up to you.
 					timer = 0;
 				}
