@@ -438,6 +438,12 @@ namespace TerraStory
                 if (Main.dayTime
                 && Main.player[Main.myPlayer].active 
                 && Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium
+                && !Main.player[Main.myPlayer].ZoneDesert
+                && !Main.player[Main.myPlayer].ZoneJungle
+                && !Main.player[Main.myPlayer].ZoneSnow
+                && !Main.player[Main.myPlayer].ZoneCrimson
+                && !Main.player[Main.myPlayer].ZoneCorrupt
+                && !Main.player[Main.myPlayer].ZoneHoly
                 && Main.player[Main.myPlayer].ZoneOverworldHeight)
                 {
                     music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/Ludibrium");
@@ -446,6 +452,12 @@ namespace TerraStory
                 if (!Main.dayTime
                 && Main.player[Main.myPlayer].active 
                 && Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium
+                && !Main.player[Main.myPlayer].ZoneDesert
+                && !Main.player[Main.myPlayer].ZoneJungle
+                && !Main.player[Main.myPlayer].ZoneSnow
+                && !Main.player[Main.myPlayer].ZoneCrimson
+                && !Main.player[Main.myPlayer].ZoneCorrupt
+                && !Main.player[Main.myPlayer].ZoneHoly
                 && Main.player[Main.myPlayer].ZoneOverworldHeight)
                 {
                     music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/LudibriumNT");
@@ -453,6 +465,12 @@ namespace TerraStory
                 }
                 if (Main.player[Main.myPlayer].active 
                 && Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium
+                && !Main.player[Main.myPlayer].ZoneDesert
+                && !Main.player[Main.myPlayer].ZoneJungle
+                && !Main.player[Main.myPlayer].ZoneSnow
+                && !Main.player[Main.myPlayer].ZoneCrimson
+                && !Main.player[Main.myPlayer].ZoneCorrupt
+                && !Main.player[Main.myPlayer].ZoneHoly
                 && Main.player[Main.myPlayer].ZoneDirtLayerHeight)
                 {
                     music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/LudibriumUG");
@@ -460,11 +478,80 @@ namespace TerraStory
                 }
                 if (Main.player[Main.myPlayer].active 
                 && Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium
+                && !Main.player[Main.myPlayer].ZoneDesert
+                && !Main.player[Main.myPlayer].ZoneJungle
+                && !Main.player[Main.myPlayer].ZoneSnow
+                && !Main.player[Main.myPlayer].ZoneCrimson
+                && !Main.player[Main.myPlayer].ZoneCorrupt
+                && !Main.player[Main.myPlayer].ZoneHoly
                 && Main.player[Main.myPlayer].ZoneRockLayerHeight)
                 {
                     music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/LudibriumCavern");
                     priority = MusicPriority.Environment;
                 }
+                if (Main.player[Main.myPlayer].ZoneRain
+                && Main.player[Main.myPlayer].ZoneOverworldHeight
+                && !Main.player[Main.myPlayer].ZoneJungle
+                && !Main.player[Main.myPlayer].ZoneCorrupt
+                && !Main.player[Main.myPlayer].ZoneCrimson
+                && !Main.player[Main.myPlayer].ZoneBeach
+                && !Main.player[Main.myPlayer].ZoneHoly
+                && !Main.player[Main.myPlayer].ZoneDesert
+                && !Main.player[Main.myPlayer].ZoneSkyHeight
+                && !Main.player[Main.myPlayer].ZoneSnow
+                && !Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium)
+                {
+                    music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/MissingYouRain");
+                    priority = MusicPriority.Event;
+                }
+                if (Main.player[Main.myPlayer].ZoneRockLayerHeight
+                && !Main.player[Main.myPlayer].ZoneJungle
+                && !Main.player[Main.myPlayer].ZoneSnow
+                && !Main.player[Main.myPlayer].ZoneCrimson
+                && !Main.player[Main.myPlayer].ZoneCorrupt
+                && !Main.player[Main.myPlayer].ZoneHoly
+                && !Main.player[Main.myPlayer].ZoneDesert
+                && !Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium)
+                {
+                    music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/AbandonnedMines");
+                    priority = MusicPriority.Environment;
+                }
+                if (!Main.dayTime
+                && Main.player[Main.myPlayer].ZoneOverworldHeight
+                && !Main.player[Main.myPlayer].ZoneJungle
+                && !Main.player[Main.myPlayer].ZoneSnow
+                && !Main.player[Main.myPlayer].ZoneCrimson
+                && !Main.player[Main.myPlayer].ZoneCorrupt
+                && !Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium)
+                //&& !Main.player[Main.myPlayer].ZoneHoly
+                {
+                    music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/HenesysShadow");
+                    priority = MusicPriority.BiomeLow;
+                }
+                if (Main.dayTime
+                && Main.player[Main.myPlayer].ZoneOverworldHeight
+                && !Main.player[Main.myPlayer].ZoneDesert
+                && !Main.player[Main.myPlayer].ZoneJungle
+                && !Main.player[Main.myPlayer].ZoneSnow
+                && !Main.player[Main.myPlayer].ZoneCrimson
+                && !Main.player[Main.myPlayer].ZoneCorrupt
+                && !Main.player[Main.myPlayer].ZoneHoly
+                && !Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium)
+                {
+                    music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/HenesysFields");
+                    priority = MusicPriority.BiomeLow;
+                }
+                if (Main.player[Main.myPlayer].ZoneDirtLayerHeight
+                && !Main.player[Main.myPlayer].ZoneJungle
+                && !Main.player[Main.myPlayer].ZoneSnow
+                && !Main.player[Main.myPlayer].ZoneCrimson
+                && !Main.player[Main.myPlayer].ZoneCorrupt
+                && !Main.player[Main.myPlayer].ZoneHoly
+                && !Main.player[Main.myPlayer].ZoneDesert
+                && !Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium)
+                {
+                    music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/UnderGround");
+                    priority = MusicPriority.Environment;
             }
         }
     }
