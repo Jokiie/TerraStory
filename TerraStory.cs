@@ -552,6 +552,7 @@ namespace TerraStory
                 {
                     music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/UnderGround");
                     priority = MusicPriority.Environment;
+                }
             }
         }
     }
