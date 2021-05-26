@@ -2,6 +2,8 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using TerraStory.Content.SFX;
+using TerraStory.Enums;
 
 namespace TerraStory.Projectiles
 {
@@ -23,6 +25,7 @@ namespace TerraStory.Projectiles
 			projectile.height = 20;
 			projectile.alpha = 10;
 			projectile.aiStyle = 1;
+			projectile.knockBack = 1f;
 			aiType = ProjectileID.Bullet;
 			projectile.magic = true;
 			projectile.friendly = true;
@@ -32,8 +35,16 @@ namespace TerraStory.Projectiles
 			projectile.penetrate = 1;
 		}
 
+		public override void OnHitNPC(NPC target,int damage, float Knockback, bool crit)
+        {
+			SoundManager.PlaySound(Sounds.Splash, projectile.position);
+			projectile.Kill();
+			for (int i = 0; i < TileCollideDustCount; i++)
+				Dust.NewDust(projectile.position, projectile.width, projectile.height, TileCollideDustType, projectile.velocity.X * TileCollideDustSpeedMulti, projectile.velocity.Y * TileCollideDustSpeedMulti);
+		}
 		public override bool OnTileCollide(Vector2 oldVelocity)
 		{
+			SoundManager.PlaySound(Sounds.Splash, projectile.position);
 			projectile.Kill();
 			for (int i = 0; i < TileCollideDustCount; i++)
 				Dust.NewDust(projectile.position, projectile.width, projectile.height, TileCollideDustType, projectile.velocity.X * TileCollideDustSpeedMulti, projectile.velocity.Y * TileCollideDustSpeedMulti);

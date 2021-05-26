@@ -8,8 +8,9 @@ namespace TerraStory.Items.Tools
 {
 	public class Spoon : ModItem
 	{
-		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Who ever thought of mining with a spoon ?");
+		public override void SetStaticDefaults() 
+		{
+			DisplayName.SetDefault("Spoon-Axe");
 		}
 
 		public override void SetDefaults() {

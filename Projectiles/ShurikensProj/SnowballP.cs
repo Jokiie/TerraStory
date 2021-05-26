@@ -53,6 +53,13 @@ namespace TerraStory.Projectiles.ShurikensProj
 			drawCacheProjsBehindProjectiles.Add(index);
 		}
 
+		public override void OnHitNPC(NPC target, int damage, float Knockback, bool crit)
+		{
+			projectile.Kill();
+			for (int i = 0; i < 20; i++)
+				Dust.NewDust(projectile.position, projectile.width, projectile.height, 16, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
+		}
+
 		public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
 		{
 			// For going through platforms and such, projectiles use a tad smaller size
@@ -167,7 +174,10 @@ namespace TerraStory.Projectiles.ShurikensProj
 			projectile.penetrate--;
 			if (projectile.penetrate <= 0)
 			{
+				SoundManager.PlaySound(Sounds.Dig, projectile.position);
 				projectile.Kill();
+				for (int i = 0; i < 20; i++)
+					Dust.NewDust(projectile.position, projectile.width, projectile.height, 16, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
 			}
 			else
 			{

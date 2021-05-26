@@ -16,13 +16,13 @@ namespace TerraStory.Items.Weapons.Thief.Shurikens
 
 		public override void SetDefaults()
 		{
-			item.damage = 5;
+			item.damage = 10;
 			item.knockBack = 0f;
 			item.shootSpeed = 7f;
 			item.width = 20;
 			item.height = 20;
-			item.useTime = 14;
-			item.useAnimation = 14;
+			item.useTime = 25;
+			item.useAnimation = 25;
 			item.maxStack = 999;
 			item.rare = ItemRarityID.White;
 			item.UseSound = SoundID.Item1;

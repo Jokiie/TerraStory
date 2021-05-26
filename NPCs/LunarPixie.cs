@@ -44,6 +44,7 @@ namespace TerraStory.NPCs
 		{
 			Player player = spawnInfo.player;
 			return !Main.dayTime
+			&& Main.hardMode
 			&& !spawnInfo.invasion
 			&& !player.GetModPlayer<TerraStoryPlayer>().ZoneLudibrium
 			&& !player.ZoneCrimson
@@ -53,7 +54,7 @@ namespace TerraStory.NPCs
 			&& !player.ZoneDesert
 			&& !player.ZoneBeach
 			&& !spawnInfo.playerSafe
-			&& Main.moonPhase == 0 // full moon? need value between 0 and 7
+			&& Main.moonPhase == 1 // full moon? need value between 1 and 8
 			&& player.ZoneOverworldHeight ? 1f : 0f;
 		}
 

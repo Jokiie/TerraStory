@@ -184,20 +184,22 @@ namespace TerraStory.NPCs
 
         public override void EditSpawnRate(Player player, ref int spawnRate, ref int maxSpawns)
         {
-
-            if (player.GetModPlayer<TerraStoryPlayer>().ZoneLudibrium)
+            if (Main.netMode != NetmodeID.MultiplayerClient)
             {
-                spawnRate = (int)(spawnRate * 2.90f);
-                maxSpawns = (int)(maxSpawns * 2.90f);
 
-            }
-            else
-            {
-                spawnRate = (int)(spawnRate * 1.50f);
-                maxSpawns = (int)(spawnRate * 1.50f);
+                if (player.GetModPlayer<TerraStoryPlayer>().ZoneLudibrium)
+                {
+                    spawnRate = (int)(spawnRate * 2f);
+                    maxSpawns = (int)(maxSpawns * 2f);
+
+                }
+                else
+                {
+                    spawnRate = (int)(spawnRate * 0.75f);
+                    maxSpawns = (int)(spawnRate * 0.75f);
+                }
             }
         }
-
         /*
         public override void EditSpawnRange(Player player, ref int spawnRangeX, ref int spawnRangeY, ref int safeRangeX, ref int safeRangeY)
         {

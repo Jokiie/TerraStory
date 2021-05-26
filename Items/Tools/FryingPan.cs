@@ -6,8 +6,9 @@ namespace TerraStory.Items.Tools
 {
     public class FryingPan : ModItem
 	{
-		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Who ever thought of removing its walls with a frying pan?");
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Hammer Pan");
 		}
 
 		public override void SetDefaults() {

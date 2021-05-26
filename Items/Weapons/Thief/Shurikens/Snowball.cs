@@ -11,18 +11,18 @@ namespace TerraStory.Items.Weapons.Thief.Shurikens
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Snow ball");
+			Tooltip.SetDefault("Snow balls");
 		}
 
 		public override void SetDefaults()
 		{
-			item.damage = 15;
+			item.damage = 5;
 			item.knockBack = 1f;
 			item.shootSpeed = 6f;
 			item.width = 20;
 			item.height = 20;
-			item.useTime = 15;
-			item.useAnimation = 15;
+			item.useTime = 25;
+			item.useAnimation = 25;
 			item.maxStack = 999;
 			item.rare = ItemRarityID.White;
 			item.UseSound = SoundID.Item1;

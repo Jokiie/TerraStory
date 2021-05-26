@@ -1,11 +1,16 @@
 /!\ STRUCTURE HELPER IS REQUIRED FOR PLAYING THIS MOD /!\
 /!\ DO NOT PLAY WITH ANOTHER HUGE CONTENT MOD. /!\
+/!\ PLEASE DOWNLOAD MY MUSIC MODS FOR TERRASTORY (TERRASTORY MUSIC AND TERRASTORY MUSIC PACK 2) /!\
+/!\ For any problem, or want to give me some feedback , send me a message on discord : Jokie /!\
 
------Français----
+|Description in english  below|
+-----Francais--------------------------------------------- 
 
 Salut ! J'ai fait un mod concernant Maplestory, car Terraria et Maplestory sont mes 2 jeux favoris et 
-avec lequel j'ai le plus jouer. Je n'ai jamais coder auparavant, et j'ai tout appris de moi-meme!
-Alors j'ai fais un peu de tout :
+avec lequel j'ai le plus jouer. Je n'ai jamais coder auparavant, et j'ai tout appris de moi-meme et en anglais 
+en plus , alors que ce n'est pas du tout mon language primaire...
+Alors j'ai fais un peu de tout avec le peu de connaissance et d'expertise que j'ai. Attendez-vous a pas mal de
+bugs, mais inquietez-vous pas, je corrige a fur et a mesure. Voici un apercu de ce que j'ai accompli:
 
 - 82 nouveaux NPCs
 - 1 nouveau biome (Ludibrium, biome en Lego)
@@ -13,7 +18,7 @@ Alors j'ai fais un peu de tout :
 - 55 nouveaux blocs et decorations, la majorité concernant Ludibrium
 - 36 buffs et débuffs
 - 5 nouvelles montures, dont 1 un peu bugguer, je crois xD
-- 5 boss, Mais 1 ou 2 étaient des tests, ils ont besoin d'un peu d'amour ...
+- 5 boss, Mais 1 ou 2 etaient des tests, ils ont besoin d'un peu d'amour ...
 - Plusieurs armure de vanilla ont été modifié et sont sujet a beaucoup d'autre changement
 - UI complètement changer pour celui de Maplestory
 - Experience et système de niveau, ainsi que des stats a monter
@@ -21,15 +26,21 @@ Alors j'ai fais un peu de tout :
 - Et beaucoup a venir ! J'ai seulement besoin d'apprendre ;)
 - Contenu jusqu'au Wall of fresh, pour le moment
 
-J'aurais bien-sûr préférer avoir tout mon contenu en gros pixel comme terraria a la base. Mais comme
+J'aurais bien-sur preferer avoir tout mon contenu en gros pixel comme terraria a la base. Mais comme
 je n'ai pas beaucoup d'expérience en spriting et que je pensais faire ce mod pour le plaisir,
 j'ai beaucoup repris les sprites de MapleStory. En ce moment je travail graduellement a retravailler 
 mon mod afin qu'il s'agence bien avec Terraria. 
 
------- English ------
+
+Merci au Luggage pet mod, avec l'open source code , j'ai pu rendre possible les pets qui loot comme Maplestory, avec 
+quelques changements && merci a la communauter Tmodloader sur discord qui ont repondu a quelques questions ! :)
+
+------ English -----------------------------------------------
+
 Hi ! I made a mod about Maplestory, because Terraria and Maplestory are my 2 favorite games and
-with which I play the most. I have never code before, and I learned everything on my own!
-So I did a bit of everything:
+with which I play the most. I have never code before, and I learned everything on my own, and in english(it's not my
+native language at all)! So I did a bit of everything with what little knowledge and expertise I have. 
+Expect a lot of bugs, but don't worry, I am correcting as I go. Here is an overview of what I have accomplished:
 
 - 82 new NPCs
 - 1 new biome (Ludibrium, Lego biome)
@@ -44,7 +55,6 @@ So I did a bit of everything:
 - 2 new class: the cannoneer and the thief
 - Content up to Wall of fresh, for the moment
 
-
 I would of course prefer to have all my content in large pixels as terraria at the base. But as
 I don't have a lot of spriting experience and thought I would make this mod for fun,
 I used the Maplestory sprites a lot. At the moment I am gradually working to rework
@@ -56,17 +66,48 @@ looting pet from Maplestory, with some changes & to the Tmodloader discord for a
 Jokie.
 
 
-----------------------------------------------------------------------
+----------------------------------------------------------------
 Changelog
 
 May, 26, 2021
 
 -Moved some music from TerraStoryMusic pack2 to TerraStory , as an attempt to fix Ludibrium music 
- not playing while raining or underground.
+ not playing while raining or underground. (Fixed !)
 
+-Added dusts on collision for the snail shell shooted from the beginner sword.
 
----------------------------------------------------------------------
+-Beginner sword's name changed for 'The shooting shell'.
+
+-Snail shell projectiles now have knockback, do dusts and sounds while colliding.
+
+-Spawn rate reduced by half. ( normal spawnrate + 1.50f to spawnrate + 0.75f)
+
+-Fixed Pixies spawning in early game... Now spawns only in hardmode.
+
+-Added back the classes's bags in the beginner's bag.
+
+-Beginners's tools names changed for Lolli-Pickaxe, Spoon-Axe and Hammer-Pan.
+
+-Snowball's projectile now create dusts while colliding and now do 5 damage instead of 15. (was kinda OP XD)
+
+-Paper plane from Ludibrium's chests now do 10 damage instead of 5 
+
+-Oranges from Ludibrium's chests now do 15 damage instead of 10 
+
+----------------------------------------------------------------
  Knowns issues
 
-- Vanilla slimes have their animation buggued the first time you encounter them, but only the first 
-  slime of each type have this issue.
+- Only the first slimes of each type from Vanilla Terraria will have their animation bugged when
+  you first meet them.
+
+
+----------------------------------------------------------------
+Knows requests // to do list
+
+-Reset buttons for stats
+
+-Numbers instead of arrows for the inventory page
+
+-Inventory more transparent and less bulky
+
+-A little rework for the ui would be great

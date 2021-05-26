@@ -4,15 +4,16 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using TerraStory.Items.Ect;
+using TerraStory.Items;
 
 namespace TerraStory.Items.Accessories
 {
-	public class NewMemberShield : ModItem
+	public class WoodenShield : ModItem
 	{
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("New Member Shield");
+			DisplayName.SetDefault("Wooden Shield");
 			Tooltip.SetDefault("Simply increase your defense by 1.");
 		}
 		public override void SetDefaults()
@@ -31,6 +32,7 @@ namespace TerraStory.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddRecipeGroup(ItemID.Wood, 10);
+			recipe.AddIngredient(ModContent.ItemType<MapleLeaf>(), 1);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

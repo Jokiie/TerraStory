@@ -15,6 +15,7 @@ namespace TerraStory.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
+			DisplayName.SetDefault("The Shooting Shell");
             Tooltip.SetDefault("Shoots snail shell and use them as ammo.");
         }
 		public override void SetDefaults()
