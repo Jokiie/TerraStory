@@ -37,7 +37,6 @@ namespace TerraStory.Items.Armor.Thief
 			return body.type == ModContent.ItemType<RedKnuckleVest>() || body.type == ModContent.ItemType<GreenKnuckleVest>();
 		}
 
-
 		public override void UpdateArmorSet(Player player)
 		{
 			player.thrownDamage += 10f;

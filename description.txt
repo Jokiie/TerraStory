@@ -94,15 +94,18 @@ May, 26, 2021
 
 -Oranges from Ludibrium's chests now do 15 damage instead of 10 
 
+-Fixed the Red Burgler Hat recipe : 10 cottons balls, 2 maple thread and 5 leathers instead of 1 wood.
+
+-Cotton balls now can be crafted with Leatty furball from JrYeti
+
 ----------------------------------------------------------------
  Knowns issues
 
 - Only the first slimes of each type from Vanilla Terraria will have their animation bugged when
   you first meet them.
 
-
 ----------------------------------------------------------------
-Knows requests // to do list
+Knows requests // To do list // Working on it 
 
 -Reset buttons for stats
 
@@ -111,3 +114,7 @@ Knows requests // to do list
 -Inventory more transparent and less bulky
 
 -A little rework for the ui would be great
+
+-Make cottons spawns everywhere in the world
+
+-Create gores for each new NPCs.

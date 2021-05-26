@@ -2,6 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
+using TerraStory.Items.Ect;
 
 namespace TerraStory.Items.Armor.Thief
 {
@@ -30,26 +31,25 @@ namespace TerraStory.Items.Armor.Thief
 		{
 			player.thrownDamage += 0.04f;
 		}
-		/*
+
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return legs.type == ItemID.BeeGreaves && body.type == ItemID.BeeBreastplate;
+			return body.type == ModContent.ItemType<RedKnuckleVest>() || body.type == ModContent.ItemType<GreenKnuckleVest>();
 		}
 
 		public override void UpdateArmorSet(Player player)
 		{
-			player.thrownCrit += 10;
-			player.thrownVelocity += 0.10f;
-			player.thrownCost33 = true;
-			player.setBonus = "10% increased throwing critical strike chance \n" +
-			"10% increased throwing velocity \n" +
-			"33% less chance to consume thrown items";
-		}*/
+			player.thrownDamage += 10f;
+			player.setBonus = "Increase throwing damage by 10%.";
+		}
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Wood, 1);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddIngredient(ModContent.ItemType<CottonBall>(), 10);
+			recipe.AddIngredient(ModContent.ItemType<MapleThread>(), 2);
+			recipe.AddIngredient(ItemID.Leather, 5);
+			recipe.AddTile(TileID.Loom);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
