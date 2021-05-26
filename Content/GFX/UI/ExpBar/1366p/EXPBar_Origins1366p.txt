@@ -1,9 +1,0 @@
-origins
------
-
-1366p
-
-EXPBar_LayerBack = X: 0 // Y: -23
-EXPBar_LayerCover = X: -150 // Y: -25
-EXPBar_Gauge = X: -15 // Y: -25
-EXPBar_RelaxEXP = EXPBar_Gauge
