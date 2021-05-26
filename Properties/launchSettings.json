@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "Terraria": {
+      "commandName": "Executable",
+      "executablePath": "$(tMLPath)",
+      "commandLineArgs": "WorldGen.KillWall(X, Y);",
+      "workingDirectory": "$(TerrariaSteamPath)"
+    },
+    "TerrariaServer": {
+      "commandName": "Executable",
+      "executablePath": "$(tMLServerPath)",
+      "workingDirectory": "$(TerrariaSteamPath)"
+    }
+  }
+}

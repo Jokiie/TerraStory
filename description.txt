@@ -1,0 +1,56 @@
+/!\ STRUCTURE HELPER IS REQUIRED FOR PLAYING THIS MOD /!\
+/!\ DO NOT PLAY WITH ANOTHER HUGE CONTENT MOD. /!\
+
+-----Français----
+
+Salut ! J'ai fait un mod concernant Maplestory, car Terraria et Maplestory sont mes 2 jeux favoris et 
+avec lequel j'ai le plus jouer. Je n'ai jamais coder auparavant, et j'ai tout appris de moi-meme!
+Alors j'ai fais un peu de tout :
+
+- 82 nouveaux NPCs
+- 1 nouveau biome (Ludibrium, biome en Lego)
+- 284 nouveaux items (Materiaux, armes, armures, munitions et plus encore !)
+- 55 nouveaux blocs et decorations, la majorité concernant Ludibrium
+- 36 buffs et débuffs
+- 5 nouvelles montures, dont 1 un peu bugguer, je crois xD
+- 5 boss, Mais 1 ou 2 étaient des tests, ils ont besoin d'un peu d'amour ...
+- Plusieurs armure de vanilla ont été modifié et sont sujet a beaucoup d'autre changement
+- UI complètement changer pour celui de Maplestory
+- Experience et système de niveau, ainsi que des stats a monter
+- 2 nouvelle classe : le cannoneer et le thief.
+- Et beaucoup a venir ! J'ai seulement besoin d'apprendre ;)
+- Contenu jusqu'au Wall of fresh, pour le moment
+
+J'aurais bien-sûr préférer avoir tout mon contenu en gros pixel comme terraria a la base. Mais comme
+je n'ai pas beaucoup d'expérience en spriting et que je pensais faire ce mod pour le plaisir,
+j'ai beaucoup repris les sprites de MapleStory. En ce moment je travail graduellement a retravailler 
+mon mod afin qu'il s'agence bien avec Terraria. 
+
+------ English ------
+Hi ! I made a mod about Maplestory, because Terraria and Maplestory are my 2 favorite games and
+with which I play the most. I have never code before, and I learned everything on my own!
+So I did a bit of everything:
+
+- 82 new NPCs
+- 1 new biome (Ludibrium, Lego biome)
+- 284 new items (Materials, weapons, armor, ammunition and more!)
+- 55 new blocks and decorations, the majority concerning Ludibrium
+- 36 buffs and debuffs
+- 5 new mounts, including 1 a little buggy, I think xD
+- 5 bosses, But 1 or 2 were tests, they need a little love ...
+- Several vanilla armor have been modified and are subject to many other changes
+- UI completely changed to match the one in MapleStory
+- Experience, level and stats system
+- 2 new class: the cannoneer and the thief
+- Content up to Wall of fresh, for the moment
+
+
+I would of course prefer to have all my content in large pixels as terraria at the base. But as
+I don't have a lot of spriting experience and thought I would make this mod for fun,
+I used the Maplestory sprites a lot. At the moment I am gradually working to rework
+my mod so that it matches well with Terraria.
+
+Thanks to the Luggage pet mod, with the open source code, I could make possible the 
+looting pet from Maplestory, with some changes & to the Tmodloader discord for answering some questions ! :)
+
+Jokie.
