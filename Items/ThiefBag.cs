@@ -28,7 +28,6 @@ namespace TerraStory.Items
 		{
 			player.QuickSpawnItem(ItemType<Garnier>());
 			player.QuickSpawnItem(ItemType<Subi>(), 300);
-			player.QuickSpawnItem(ItemID.LesserHealingPotion, 5);
 		}
 	}
 }

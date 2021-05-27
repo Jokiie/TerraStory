@@ -30,7 +30,6 @@ namespace TerraStory.Items
 		{
 			player.QuickSpawnItem(ItemType<Gun>());
 			player.QuickSpawnItem(ItemType<Bullet>(), 300);
-			player.QuickSpawnItem(ItemID.LesserHealingPotion, 5);
 		}
 	}
 }

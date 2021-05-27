@@ -12,9 +12,8 @@ namespace TerraStory.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Beginner's Bag");
-			Tooltip.SetDefault("<Right click> for a beginner weapon and a random choice of :" +
-				"\n Warrior, Archer, Magician, Summoner, cannoneer or thief bags !");
+			DisplayName.SetDefault("Starter Bag");
+			Tooltip.SetDefault("<Right click> for a Hammer-Pan , 5 lesser healing potions and a bag for each class!");
 		}
 
 		public override void SetDefaults()
@@ -31,24 +30,14 @@ namespace TerraStory.Items
 
 		public override void RightClick(Player player)
 		{
-			player.QuickSpawnItem(ItemType<BeginnerSword>());
-			player.QuickSpawnItem(ItemType<GreenSnailShell>(), 300);
+			player.QuickSpawnItem(ItemID.LesserHealingPotion, 5);
 			player.QuickSpawnItem(ItemType<FryingPan>());
-
-			
-			int choice = Main.rand.Next(6);
-			if (choice == 0)
-				player.QuickSpawnItem(ItemType<WarriorBag>());
-			if (choice == 1)
-				player.QuickSpawnItem(ItemType<MagicianBag>());
-			if (choice == 2)
-				player.QuickSpawnItem(ItemType<ThiefBag>());
-			if (choice == 3)
-				player.QuickSpawnItem(ItemType<ArcherBag>());
-			if (choice == 4)
-				player.QuickSpawnItem(ItemType<SummonerBag>());
-			if (choice == 5)
-				player.QuickSpawnItem(ItemType<CannoneerBag>());
+			player.QuickSpawnItem(ItemType<WarriorBag>());
+			player.QuickSpawnItem(ItemType<MagicianBag>());
+			player.QuickSpawnItem(ItemType<ThiefBag>());
+			player.QuickSpawnItem(ItemType<ArcherBag>());
+			player.QuickSpawnItem(ItemType<SummonerBag>());
+			player.QuickSpawnItem(ItemType<CannoneerBag>());
 		}
 	}
 }

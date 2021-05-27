@@ -32,7 +32,6 @@ namespace TerraStory.Items
 		{
 			player.QuickSpawnItem(ItemType<NoviceCannon>());
 			player.QuickSpawnItem(ItemType<NoviceBomb>(), 300);
-			player.QuickSpawnItem(ItemID.LesserHealingPotion, 5);
 		}
 	}
 }

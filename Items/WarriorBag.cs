@@ -31,7 +31,6 @@ namespace TerraStory.Items
 		{
 			player.QuickSpawnItem(ItemType<Sword>());
 			player.QuickSpawnItem(ItemType<WoodenShield>());
-			player.QuickSpawnItem(ItemID.LesserHealingPotion, 5);
 		}
 	}
 }

@@ -30,7 +30,6 @@ namespace TerraStory.Items
 		{
 			player.QuickSpawnItem(ItemType<Bow>());
 			player.QuickSpawnItem(ItemID.WoodenArrow, 300);
-			player.QuickSpawnItem(ItemID.LesserHealingPotion, 5);
 		}
 	}
 }

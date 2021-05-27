@@ -29,7 +29,6 @@ namespace TerraStory.Items
 		public override void RightClick(Player player) 
 		{
 			player.QuickSpawnItem(ItemType<KevinsPizza>());
-			player.QuickSpawnItem(ItemID.LesserHealingPotion, 5);
 		}
 	}
 }

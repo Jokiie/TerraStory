@@ -29,8 +29,7 @@ namespace TerraStory.Items
 		public override void RightClick(Player player)
 		{
 			player.QuickSpawnItem(ItemType<Staff>());
-			player.QuickSpawnItem(ItemID.LesserManaPotion, 5);
-			player.QuickSpawnItem(ItemID.LesserHealingPotion, 5);
+			player.QuickSpawnItem(ItemID.LesserManaPotion, 10);
 		}
 	}
 }

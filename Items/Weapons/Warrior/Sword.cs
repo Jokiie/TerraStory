@@ -11,8 +11,9 @@ namespace TerraStory.Items.Weapons.Warrior
     public class Sword : ModItem
 	{
 
-		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("First sword is always special.");  //The (English) text shown below your weapon's name
+		public override void SetStaticDefaults()
+		{
+			Tooltip.SetDefault("First sword is always special.");
 		}
 
 		public override void SetDefaults()
