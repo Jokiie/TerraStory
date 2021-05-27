@@ -36,8 +36,8 @@ namespace TerraStory.Projectiles.Ranger
 
 		public override void Kill(int timeLeft)
 		{
-
-			Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 64);
+			Collision.HitTiles(projectile.position + projectile.velocity, projectile.velocity, projectile.width, projectile.height);
+			Main.PlaySound(SoundID.Item10, projectile.position);
 			if (projectile.owner == Main.myPlayer)
 			{
 				// Drop the related item, 1 in 18 chance (~5.5% chance)
@@ -53,22 +53,22 @@ namespace TerraStory.Projectiles.Ranger
 					NetMessage.SendData(MessageID.SyncItem, -1, -1, null, item, 1f);
 				}
 			}
-			for (int num158 = 0; num158 < 20; num158++)
+			for (int i = 0; i < 20; i++)
 			{
-				int num159 = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 9, projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, default(Color), 0.5f);
+				int dust = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 9, projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, default(Color), 0.5f);
 				if (Main.rand.NextBool(3))
 				{
-					Main.dust[num159].fadeIn = 1.1f + Main.rand.Next(-10, 11) * 0.01f;
-					Main.dust[num159].scale = 0.35f + Main.rand.Next(-10, 11) * 0.01f;
-					Main.dust[num159].type++;
+					Main.dust[dust].fadeIn = 1.1f + Main.rand.Next(-10, 11) * 0.01f;
+					Main.dust[dust].scale = 0.35f + Main.rand.Next(-10, 11) * 0.01f;
+					Main.dust[dust].type++;
 				}
 				else
 				{
-					Main.dust[num159].scale = 1.2f + Main.rand.Next(-10, 11) * 0.01f;
+					Main.dust[dust].scale = 1.2f + Main.rand.Next(-10, 11) * 0.01f;
 				}
-				Main.dust[num159].noGravity = true;
-				Main.dust[num159].velocity *= 2.5f;
-				Main.dust[num159].velocity -= projectile.oldVelocity / 10f;
+				Main.dust[dust].noGravity = true;
+				Main.dust[dust].velocity *= 2.5f;
+				Main.dust[dust].velocity -= projectile.oldVelocity / 10f;
 
 
 			}

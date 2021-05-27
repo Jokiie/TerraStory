@@ -31,7 +31,7 @@ namespace TerraStory.Buffs
         public override void Update(NPC npc, ref int buffIndex)
         {
             npc.GetGlobalNPC<TSNPC>().PoisonedShuriken = true;
-            int num2 = Dust.NewDust(npc.position, npc.width, npc.height, ModContent.DustType<PurpleDust>());
+            int num2 = Dust.NewDust(npc.position, npc.width, npc.height, 27);
             Main.dust[num2].scale = 0.8f;
             Main.dust[num2].velocity *= 3f;
             Main.dust[num2].noGravity = false;

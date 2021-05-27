@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using TerraStory.Items.Armor.Mage;
+using TerraStory.Projectiles;
 
 namespace TerraStory.Items.Weapons.Mage
 {
@@ -10,7 +11,7 @@ namespace TerraStory.Items.Weapons.Mage
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Corrupted Staff");
-			Tooltip.SetDefault("Shoots corrupted shards on your ennemies.");
+			Tooltip.SetDefault("Shoots a corrupted ball on your ennemies.");
 		}
 		public override void SetDefaults()
 		{
@@ -31,7 +32,7 @@ namespace TerraStory.Items.Weapons.Mage
 			item.magic = true;
 			item.autoReuse = true;
 			Item.staff[item.type] = true;
-			item.shoot = mod.ProjectileType("CorruptedItem");
+			item.shoot = ModContent.ProjectileType<CorruptedItem>();
 		}
 	}
 }

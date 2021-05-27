@@ -19,64 +19,68 @@ namespace TerraStory.Projectiles.Magic
 		{
 			projectile.width = 27;
 			projectile.height = 27;
-			projectile.scale = 0.90f;
-			projectile.aiStyle = 1;
-			aiType = ProjectileID.HarpyFeather;
-			projectile.friendly = true;
-			projectile.timeLeft = 100;
-			projectile.alpha = 25;
+			projectile.scale = 0.80f;
+			projectile.penetrate = 1;
+			projectile.timeLeft = 120;
+			projectile.alpha = 100;
 			projectile.light = 0.5f;
+			projectile.aiStyle = ProjectileID.Bullet;
+			aiType = ProjectileID.Shuriken;
+			projectile.magic = true;
+			projectile.friendly = true;
 			projectile.tileCollide = true;
 			projectile.ignoreWater = true;
-			projectile.penetrate = 1;
 		}
-		//Additional Hooks/methods here.
+
 		public override bool OnTileCollide(Vector2 oldVelocity)
 		{
-			SoundManager.PlaySound(Sounds.Splash, projectile.position);
+			SoundManager.PlaySound(Sounds.LegacySoundStyle_Item9, projectile.position);
 			projectile.Kill();
-			for (int i = 0; i < 30; i++)
-				Dust.NewDust(projectile.position, projectile.width, projectile.height, 102, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
+			for (int i = 0; i < 20; i++)
+			{
+				int dust = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 135, projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, default(Color), 0.5f);
+				if (Main.rand.NextBool(3))
+				{
+					Main.dust[dust].fadeIn = 1.1f + Main.rand.Next(-10, 11) * 0.01f;
+					Main.dust[dust].scale = 0.35f + Main.rand.Next(-10, 11) * 0.01f;
+					Main.dust[dust].type++;
+				}
+				else
+				{
+					Main.dust[dust].scale = 0.50f + Main.rand.Next(-10, 11) * 0.01f;
+				}
+				Main.dust[dust].noGravity = true;
+				Main.dust[dust].velocity *= 2.5f;
+				Main.dust[dust].velocity -= projectile.oldVelocity / 10f;
+
+
+			}
 
 			return true;
 		}
-		public override void AI()
+
+		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
 		{
-
-			projectile.ai[0] += 1f;
-			if (projectile.ai[0] > 50f)
+			SoundManager.PlaySound(Sounds.LegacySoundStyle_Item9, projectile.position);
+			projectile.Kill();
+			for (int i = 0; i < 20; i++)
 			{
-				// Fade out
-				projectile.alpha += 2;
-				if (projectile.alpha > 5)
+				int dust = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 135, projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, default(Color), 0.5f);
+				if (Main.rand.NextBool(3))
 				{
-					projectile.alpha = 5;
+					Main.dust[dust].fadeIn = 1.1f + Main.rand.Next(-10, 11) * 0.01f;
+					Main.dust[dust].scale = 0.35f + Main.rand.Next(-10, 11) * 0.01f;
+					Main.dust[dust].type++;
 				}
-			}
-			else
-			{
-				// Fade in
-				projectile.alpha -= 2;
-				if (projectile.alpha < 2)
+				else
 				{
-					projectile.alpha = 2;
+					Main.dust[dust].scale = 0.50f + Main.rand.Next(-10, 11) * 0.01f;
 				}
-			}
-			// Slow down
-			projectile.velocity *= 0.98f;
+				Main.dust[dust].noGravity = true;
+				Main.dust[dust].velocity *= 2.5f;
+				Main.dust[dust].velocity -= projectile.oldVelocity / 10f;
 
-			if (projectile.ai[0] >= projectile.timeLeft)
-			{
-				SoundManager.PlaySound(Sounds.Splash, projectile.position);
-				projectile.Kill();
-				for (int i = 0; i < 30; i++)
-					Dust.NewDust(projectile.position, projectile.width, projectile.height, 102, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
-			}
-			projectile.direction = projectile.spriteDirection = projectile.velocity.X > 0f ? 1 : -1;
-			projectile.rotation = projectile.velocity.ToRotation();
-			if (projectile.velocity.Y > 30f)
-			{
-				projectile.velocity.Y = 30f;
+
 			}
 		}
 	}

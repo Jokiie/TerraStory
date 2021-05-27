@@ -43,8 +43,8 @@ namespace TerraStory.Items.Weapons.Thief.Shurikens
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.IceBlock, 500);
 			recipe.AddIngredient(ItemType<MapleLeaf>(), 5);
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this, 500);
+			recipe.AddTile(TileID.IceMachine);
+			recipe.SetResult(this, 250);
 			recipe.AddRecipe();
 		}
 	}

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using TerraStory.Projectiles.Minions.StarPixie;
 
 namespace TerraStory.Items.Boss
 {
@@ -45,7 +46,7 @@ namespace TerraStory.Items.Boss
 			player.QuickSpawnItem(ItemID.FallenStar, Main.rand.Next(3,5));
 			int choice = Main.rand.Next(10);
 			if (choice == 0)
-				player.QuickSpawnItem(mod.ItemType("StarPixieStaff"));
+				player.QuickSpawnItem(ModContent.ItemType<StarPixieStaff>());
 		}
 	}
 }

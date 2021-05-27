@@ -69,7 +69,7 @@ namespace TerraStory.Projectiles.ShurikensProj
 				}
 				else
 				{
-					Main.dust[dust].scale = 1.2f + Main.rand.Next(-10, 11) * 0.01f;
+					Main.dust[dust].scale = 0.50f + Main.rand.Next(-10, 11) * 0.01f;
 				}
 				Main.dust[dust].noGravity = true;
 				Main.dust[dust].velocity *= 2.5f;

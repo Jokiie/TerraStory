@@ -20,7 +20,7 @@ namespace TerraStory.Buffs
         public override void Update(Player player, ref int buffIndex)
         {
             player.GetModPlayer<TerraStoryPlayer>().DeepCut = true;
-            int num1 = Dust.NewDust(player.position, player.width, player.height, 5);
+            int num1 = Dust.NewDust(player.position, player.width, player.height, 60);
             Main.dust[num1].scale = 0.9f;
             Main.dust[num1].velocity *= 0.9f;
             Main.dust[num1].noGravity = false;

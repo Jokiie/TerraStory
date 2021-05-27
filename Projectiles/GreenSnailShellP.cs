@@ -11,7 +11,7 @@ namespace TerraStory.Projectiles
 	{
 		const int TileCollideDustType = 89;
 		const int TileCollideDustCount = 15;
-		const float TileCollideDustSpeedMulti = 0.3f;
+		const float TileCollideDustSpeedMulti = 0.2f;
 
 		public override void SetStaticDefaults()
 		{
@@ -24,14 +24,14 @@ namespace TerraStory.Projectiles
 			projectile.width = 20;
 			projectile.height = 20;
 			projectile.alpha = 10;
-			projectile.aiStyle = 1;
 			projectile.knockBack = 1f;
-			aiType = ProjectileID.Bullet;
+			projectile.aiStyle = ProjectileID.Bullet;
+			aiType = ProjectileID.Shuriken;
 			projectile.magic = true;
 			projectile.friendly = true;
 			projectile.tileCollide = true;
 			projectile.ignoreWater = true;
-			projectile.timeLeft = 60;
+			projectile.timeLeft = 100;
 			projectile.penetrate = 1;
 		}
 		public override void OnHitNPC(NPC target, int damage, float Knockback, bool crit)

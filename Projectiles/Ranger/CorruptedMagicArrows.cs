@@ -72,15 +72,14 @@ namespace TerraStory.Projectiles.Ranger
 				{
 					num90 = 2;
 				}
-				for (int num91 = 0; num91 < num90; num91++)
+				for (int i = 0; i < 25; i++)
 				{
-					int num92 = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y + 2f), projectile.width, projectile.height, 21, projectile.velocity.X * 0.2f, projectile.velocity.Y * 0.1f, 0, default(Color), 0.4f);
-					Main.dust[num92].noGravity = true;
-					Dust expr_46AC_cp_0 = Main.dust[num92];
-					expr_46AC_cp_0.velocity.X = expr_46AC_cp_0.velocity.X * 0.3f;
-					Dust expr_46CA_cp_0 = Main.dust[num92];
-					expr_46CA_cp_0.velocity.Y = expr_46CA_cp_0.velocity.Y * 0.3f;
-					Main.dust[num92].noLight = true;
+					// We get the projectile position,width and height
+					// Which are passed into the NewDust method.
+					Vector2 pos = projectile.position;
+					int w = projectile.width / 2;
+					int h = projectile.height;
+					int dust = Dust.NewDust(pos, w, h, 63, 0f, 0f, projectile.alpha, default(Color), 0.5f);
 				}
 			}
 		}

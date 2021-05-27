@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using TerraStory.Projectiles;
 
 namespace TerraStory.Items.Weapons.Mage
 {
@@ -9,7 +10,7 @@ namespace TerraStory.Items.Weapons.Mage
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Crimson Staff");
-			Tooltip.SetDefault("Shoots crimson shards on your ennemies.");
+			Tooltip.SetDefault("Shoots a crimson ball on your ennemies.");
 		}
 		public override void SetDefaults()
 		{
@@ -30,7 +31,7 @@ namespace TerraStory.Items.Weapons.Mage
 			item.magic = true;
 			item.autoReuse = true;
 			Item.staff[item.type] = true;
-			item.shoot = mod.ProjectileType("CrimsonItem");
+			item.shoot = ModContent.ProjectileType<CrimsonItem>();
 		}
 	}
 }

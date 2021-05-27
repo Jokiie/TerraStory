@@ -26,7 +26,7 @@ namespace TerraStory.Items.Weapons.Mage
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.value = Item.sellPrice(copper: 5);
 			item.rare = ItemRarityID.White;
-			item.UseSound = SoundID.Item20;
+			item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/MagicClaw");
 			item.magic = true;
 			item.noMelee = true;
 			item.autoReuse = false;
@@ -36,7 +36,7 @@ namespace TerraStory.Items.Weapons.Mage
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup(ItemID.Wood, 10);
+			recipe.AddIngredient(ItemID.Wood, 10);
 			recipe.AddIngredient(ItemID.ManaCrystal);
 			recipe.AddIngredient(ItemType<MapleLeaf>(), 1);
 			recipe.AddTile(TileID.WorkBenches);

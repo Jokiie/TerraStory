@@ -38,10 +38,10 @@ namespace TerraStory.Items.Weapons.Thief.Shurikens
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup(ItemID.Wood, 10);
+			recipe.AddIngredient(ItemID.Wood, 10);
 			recipe.AddIngredient(ItemType<MapleLeaf>(), 1);
 			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this, 100);
+			recipe.SetResult(this, 50);
 			recipe.AddRecipe();
 		}
 	}

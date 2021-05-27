@@ -52,6 +52,7 @@ namespace TerraStory.Items.Weapons.Mage
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.GoldBar, 1);
 			recipe.AddIngredient(ItemID.Silk, 10);
+			recipe.AddIngredient(ItemID.Amethyst, 3);
 			recipe.AddIngredient(ModContent.ItemType<ManaInfusedThread>(), 3);
 			recipe.AddIngredient(ItemType<MapleLeaf>(), 1);
 			recipe.AddTile(TileID.Anvils);
