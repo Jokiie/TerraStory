@@ -20,7 +20,7 @@ namespace TerraStory.Items.Weapons
         }
 		public override void SetDefaults()
 		{
-			item.damage = 4;
+			item.damage = 8;
 			item.scale = 1f;
 			item.magic = true;
 			item.width = 30;

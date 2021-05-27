@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using TerraStory.Items.Weapons.Ranger;
 
 namespace TerraStory.Projectiles.Ranger
 {
@@ -35,11 +36,23 @@ namespace TerraStory.Projectiles.Ranger
 
 		public override void Kill(int timeLeft)
 		{
-				if (projectile.owner == Main.myPlayer)
-				{
-					int item = Main.rand.NextBool(5) ? Item.NewItem(projectile.getRect(), mod.ItemType("CopperArrow")) : 0;
-				}
+
 			Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 64);
+			if (projectile.owner == Main.myPlayer)
+			{
+				// Drop the related item, 1 in 18 chance (~5.5% chance)
+				int item =
+				Main.rand.NextBool(18)
+					? Item.NewItem(projectile.getRect(), ModContent.ItemType<CopperArrow>())
+					: 0;
+
+				// Sync the drop for multiplayer
+				// Note the usage of Terraria.ID.MessageID, please use this!
+				if (Main.netMode == NetmodeID.MultiplayerClient && item >= 0)
+				{
+					NetMessage.SendData(MessageID.SyncItem, -1, -1, null, item, 1f);
+				}
+			}
 			for (int num158 = 0; num158 < 20; num158++)
 			{
 				int num159 = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 9, projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, default(Color), 0.5f);

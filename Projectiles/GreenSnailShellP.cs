@@ -9,9 +9,9 @@ namespace TerraStory.Projectiles
 {
 	public class GreenSnailShellP : ModProjectile
 	{
-		const int TileCollideDustType = 194;
-		const int TileCollideDustCount = 7;
-		const float TileCollideDustSpeedMulti = 0.2f;
+		const int TileCollideDustType = 89;
+		const int TileCollideDustCount = 15;
+		const float TileCollideDustSpeedMulti = 0.3f;
 
 		public override void SetStaticDefaults()
 		{

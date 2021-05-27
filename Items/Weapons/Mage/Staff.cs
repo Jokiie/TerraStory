@@ -1,4 +1,4 @@
-using TerraStory.Projectiles;
+using TerraStory.Projectiles.Magic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -18,7 +18,7 @@ namespace TerraStory.Items.Weapons.Mage
 			item.width = 40;
 			item.height = 40;
 			item.damage = 12;
-			item.mana = 1;
+			item.mana = 2;
 			item.knockBack = 1f;
 			item.shootSpeed = 6f;
 			item.useTime = 25;

@@ -8,8 +8,9 @@ namespace TerraStory.Projectiles.ShurikensProj
 {
 	public class SubiP : ModProjectile
 	{
-		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Subi");
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Subi Throwing-Stars");
 		}
 
 		public override void SetDefaults()
@@ -23,12 +24,10 @@ namespace TerraStory.Projectiles.ShurikensProj
 			projectile.tileCollide = true;
 			projectile.friendly = true;
 			projectile.thrown = true;
-			projectile.ignoreWater = true;			
+			projectile.ignoreWater = true;
 		}
 		public override bool OnTileCollide(Vector2 oldVelocity)
 		{
-			//If collide with tile, reduce the penetrate.
-			//So the projectile can reflect at most 5 times
 			projectile.penetrate--;
 			if (projectile.penetrate <= 0)
 			{
@@ -38,17 +37,10 @@ namespace TerraStory.Projectiles.ShurikensProj
 			{
 				Collision.HitTiles(projectile.position + projectile.velocity, projectile.velocity, projectile.width, projectile.height);
 				Main.PlaySound(SoundID.Item10, projectile.position);
-				if (projectile.velocity.X != oldVelocity.X)
-				{
-					projectile.velocity.X = -oldVelocity.X;
-				}
-				if (projectile.velocity.Y != oldVelocity.Y)
-				{
-					projectile.velocity.Y = -oldVelocity.Y;
-				}
 			}
 			return false;
 		}
+
 		public override void Kill(int timeLeft)
 		{
 			Collision.HitTiles(projectile.position + projectile.velocity, projectile.velocity, projectile.width, projectile.height);
@@ -61,12 +53,29 @@ namespace TerraStory.Projectiles.ShurikensProj
 					? Item.NewItem(projectile.getRect(), ModContent.ItemType<Subi>())
 					: 0;
 
-				// Sync the drop for multiplayer
-				// Note the usage of Terraria.ID.MessageID, please use this!
 				if (Main.netMode == NetmodeID.MultiplayerClient && item >= 0)
 				{
 					NetMessage.SendData(MessageID.SyncItem, -1, -1, null, item, 1f);
 				}
+			}
+			for (int i = 0; i < 20; i++)
+			{
+				int dust = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 11, projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, default(Color), 0.5f);
+				if (Main.rand.NextBool(3))
+				{
+					Main.dust[dust].fadeIn = 1.1f + Main.rand.Next(-10, 11) * 0.01f;
+					Main.dust[dust].scale = 0.35f + Main.rand.Next(-10, 11) * 0.01f;
+					Main.dust[dust].type++;
+				}
+				else
+				{
+					Main.dust[dust].scale = 1.2f + Main.rand.Next(-10, 11) * 0.01f;
+				}
+				Main.dust[dust].noGravity = true;
+				Main.dust[dust].velocity *= 2.5f;
+				Main.dust[dust].velocity -= projectile.oldVelocity / 10f;
+
+
 			}
 		}
 	}

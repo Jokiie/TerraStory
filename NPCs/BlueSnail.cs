@@ -66,6 +66,8 @@ namespace TerraStory.NPCs
 				Item.NewItem(npc.getRect(), ItemType<Items.BundleOfMesos>());
 			if (Main.rand.NextFloat() < .20f)
 				Item.NewItem(npc.getRect(), ItemType<Items.MapleLeaf>());
+			if (Main.rand.NextFloat() < .05f)
+				Item.NewItem(npc.getRect(), ItemType<Items.Weapons.BeginnerSword>());
 		}
 	}
 }

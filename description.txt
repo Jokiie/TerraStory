@@ -78,7 +78,9 @@ May, 26, 2021
 
 -Beginner sword's name changed for 'The shooting shell'.
 
--Snail shell projectiles now have knockback, do dusts and sounds while colliding.
+-Snail shell projectiles now apply knockback and makes sounds while colliding, damage increased from 4 to 8.
+
+-The shooting Shell now drops from Green, Blue and red snails (5% drop rate for now).
 
 -Spawn rate reduced by half. ( normal spawnrate + 1.50f to spawnrate + 0.75f)
 
@@ -96,8 +98,11 @@ May, 26, 2021
 
 -Fixed the Red Burgler Hat recipe : 10 cottons balls, 2 maple thread and 5 leathers instead of 1 wood.
 
--Cotton balls now can be crafted with Leatty furball from JrYeti
+-Cotton balls can now be crafted with Leatty furball from JrYeti.
 
+-Complete rework for the Starter Staff for magician. The projectile rotate while traveling to
+ the target and makes dusts & sounds while expiring / on hit npc + mana usage increased from 1 to 2.
+ .
 ----------------------------------------------------------------
  Knowns issues
 
@@ -115,6 +120,8 @@ Knows requests // To do list // Working on it
 
 -A little rework for the ui would be great
 
--Make cottons spawns everywhere in the world
+-Make cotton plant spawns everywhere in the world
 
 -Create gores for each new NPCs.
+
+-Finish my Ludibrium boss one day...
