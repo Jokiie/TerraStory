@@ -19,12 +19,12 @@ namespace TerraStory.NPCs
 		{
 			npc.width = 32;
 			npc.height = 32;
-			npc.scale = 0.60f;
+			npc.scale = 0.55f;
 			npc.aiStyle = 14;
-			npc.damage = 18;
+			npc.damage = 10;
 			npc.defense = 2;
 			npc.lifeMax = 60;
-			npc.knockBackResist = 0.20f;
+			npc.knockBackResist = 0.80f;
 			npc.npcSlots = 1f;
 			npc.value = Item.buyPrice(0, 0, 0, 75);
 			npc.HitSound = mod.GetLegacySoundSlot(SoundType.NPCHit, "Sounds/NPCHit/StirgeHit");
@@ -52,7 +52,7 @@ namespace TerraStory.NPCs
 		public override void FindFrame(int frameHeight)
 		{
 			npc.spriteDirection = npc.direction;
-			npc.frameCounter -= -1.9f;
+			npc.frameCounter -= -2.9f;
 			npc.frameCounter %= Main.npcFrameCount[npc.type];
 			int frame = (int)npc.frameCounter;
 			npc.frame.Y = frame * frameHeight;
