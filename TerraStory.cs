@@ -499,15 +499,16 @@ namespace TerraStory
                 if (Main.player[Main.myPlayer].ZoneRain)
                 {
                     if (!Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium
-                && Main.player[Main.myPlayer].ZoneOverworldHeight
-                && !Main.player[Main.myPlayer].ZoneJungle
-                && !Main.player[Main.myPlayer].ZoneCorrupt
-                && !Main.player[Main.myPlayer].ZoneCrimson
-                && !Main.player[Main.myPlayer].ZoneBeach
-                && !Main.player[Main.myPlayer].ZoneHoly
-                && !Main.player[Main.myPlayer].ZoneDesert
-                && !Main.player[Main.myPlayer].ZoneSkyHeight
-                && !Main.player[Main.myPlayer].ZoneSnow)
+                    && Main.player[Main.myPlayer].ZoneOverworldHeight
+                    && !Main.player[Main.myPlayer].ZoneJungle
+                    && !Main.player[Main.myPlayer].ZoneCorrupt
+                    && !Main.player[Main.myPlayer].ZoneCrimson
+                    && !Main.player[Main.myPlayer].ZoneBeach
+                    && !Main.player[Main.myPlayer].ZoneHoly
+                    && !Main.player[Main.myPlayer].ZoneDesert
+                    && !Main.player[Main.myPlayer].ZoneSkyHeight
+                    && !Main.player[Main.myPlayer].ZoneSnow
+                    && Main.player[Main.myPlayer].ZoneRain)
                     {
                         music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/MissingYouRain");
                         priority = MusicPriority.Event;
@@ -515,12 +516,12 @@ namespace TerraStory
                 }
                 if (Main.player[Main.myPlayer].ZoneRockLayerHeight)
                     if (!Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium
-                && !Main.player[Main.myPlayer].ZoneJungle
-                && !Main.player[Main.myPlayer].ZoneSnow
-                && !Main.player[Main.myPlayer].ZoneCrimson
-                && !Main.player[Main.myPlayer].ZoneCorrupt
-                && !Main.player[Main.myPlayer].ZoneHoly
-                && !Main.player[Main.myPlayer].ZoneDesert)
+                    && !Main.player[Main.myPlayer].ZoneJungle
+                    && !Main.player[Main.myPlayer].ZoneSnow
+                    && !Main.player[Main.myPlayer].ZoneCrimson
+                    && !Main.player[Main.myPlayer].ZoneCorrupt
+                    && !Main.player[Main.myPlayer].ZoneHoly
+                    && !Main.player[Main.myPlayer].ZoneDesert)
                     {
                         music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/AbandonnedMines");
                         priority = MusicPriority.Environment;
