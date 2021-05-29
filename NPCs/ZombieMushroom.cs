@@ -57,7 +57,7 @@ namespace TerraStory.NPCs
 			&& !player.ZoneBeach
 			&& !player.ZoneJungle
 			&& !player.ZoneHoly
-			&& player.ZoneOverworldHeight ? 2.09f : 0f;
+			&& player.ZoneOverworldHeight ? 1f : 0f;
 		}
 		
 		public override void FindFrame(int frameHeight)
