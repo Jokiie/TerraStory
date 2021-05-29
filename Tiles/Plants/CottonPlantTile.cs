@@ -12,6 +12,7 @@ namespace TerraStory.Tiles.Plants
     {
         public override void SetDefaults()
         {
+      
             Main.tileFrameImportant[Type] = true;
             Main.tileCut[Type] = true;
             Main.tileNoFail[Type] = true;
@@ -19,9 +20,9 @@ namespace TerraStory.Tiles.Plants
             TileObjectData.newTile.CopyFrom(TileObjectData.StyleAlch);
             TileObjectData.newTile.AnchorValidTiles = new int[] {
                 TileID.Mud,
+                TileID.Dirt,
+                TileID.Grass,
                 TileID.JungleGrass,
-                TileID.JunglePlants2,
-                TileID.JunglePlants
             };
             TileObjectData.newTile.AnchorAlternateTiles = new int[] {
                 TileID.ClayPot,
@@ -30,16 +31,15 @@ namespace TerraStory.Tiles.Plants
             };
             TileObjectData.addTile(Type);
         }
-        /*
+        
         public override bool CanPlace(int i, int j)
         {
-            // Plant cannot be placed on herbs or itself.
             if (Main.tileAlch[Main.tile[i, j].type] || Main.tile[i, j].type == Type)
             {
                 return false;
             }
             return true;
-        }*/
+        }
 
         public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
         {
@@ -54,7 +54,6 @@ namespace TerraStory.Tiles.Plants
             int growthStage = Main.tile[i, j].frameX / 15;
             if (growthStage > 0)
             {
-                // I thought this was a workaround but it turns out the source code does it this way too. Ech.
                 if (Main.player[Player.FindClosest(new Microsoft.Xna.Framework.Vector2(i * 16, j * 16), 0, 0)].HeldItem.netID == ItemID.StaffofRegrowth)
                 {
                     Item.NewItem(i * 16, j * 16, 0, 0, ModContent.ItemType<CottonPlantSeedItem>() , Main.rand.Next(1, 6));
@@ -66,11 +65,8 @@ namespace TerraStory.Tiles.Plants
                     Item.NewItem(i * 16, j * 16, 0, 0, ModContent.ItemType<CottonPlantItem>());
                 }
             }
-            // Tells game not to use default drop. Method won't work without a return statement.
             return false;
         }
-
-        // Not sure why 15 is the number considering my textures are 14 pixels wide, and 18 is the number for 16 pixel wide textures.
         public override void RandomUpdate(int i, int j)
         {
                 if (Main.tile[i, j].frameX == 0)

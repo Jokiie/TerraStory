@@ -88,7 +88,7 @@ May, 26, 2021
 
 -Added back the classes's bags in the beginner's bag.
 
--Beginners's tools names changed for Lolli-Pickaxe, Spoon-Axe and Hammer-Pan.
+-Beginners's tools names changed for Lolli-Axe, Pick-Spoon and Hammer-Pan.
 
 -Snowball's projectile now create dusts while colliding and now do 5 damage instead of 15. (was kinda OP XD)
 
@@ -102,13 +102,26 @@ May, 26, 2021
 
 -Complete rework for the Starter Staff for magician. The projectile rotate while traveling to
  the target and makes dusts & sounds while expiring / on hit npc + mana usage increased from 1 to 2.
- .
+ 
+ May , 28, 2021
+
+ -Cotton plants now grow on surface during world generation,but currently don't grow back . Please wait some days to give
+  these the time to grow enough for harvesting !
+
+ -Recipe for cotton balls changed from "3 cottonplant for 1 cotton ball" for "1 cottonplant for 3 cottons balls".
+  Grow them in their plantbox to get your new gear fast ! ( 2 dirts blocks, 2 woods, 2 cotton plant seeds)
+
+  -Added the Flyeye mob to compensate for the lacks of Devils eyes during night. They drop Lens and black lens as well.
+
+
 ----------------------------------------------------------------
  Knowns issues
 
 - Only the first slimes of each type from Vanilla Terraria will have their animation bugged when
   you first meet them.
 
+ -After creating a world, if you want to create another for X reasons, and try to create one, a pop-up will apear saying that the stream is not closed (Ludi tower not fully closed ect). This is due to Structure Helper,
+ because my towers are so bigs.. You just need to relaunch the game. Sorry until I find how to fix this :(.
 ----------------------------------------------------------------
 Knows requests // To do list // Working on it 
 

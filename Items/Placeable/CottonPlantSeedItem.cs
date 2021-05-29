@@ -11,7 +11,7 @@ namespace TerraStory.Items.Placeable
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Cotton plant seeds");
-            Tooltip.SetDefault("Cotton plants only grow in a tropical climate. \n" +
+            Tooltip.SetDefault("Cotton plants grow in a tropical climate. \n" +
                 "But they can survive in a temperate climate if it doesn't freeze.");
         }
 

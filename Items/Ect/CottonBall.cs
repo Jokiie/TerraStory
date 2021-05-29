@@ -37,43 +37,20 @@ namespace TerraStory.Items.Ect
 
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<TeddysCotton>(), 1);
-			recipe.AddIngredient(ModContent.ItemType<CottonPlantItem>(), 2);
 			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
+			recipe.SetResult(this, 3);
 			recipe.AddRecipe();
 
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<LeattyFurball>(), 2);
+			recipe.AddIngredient(ModContent.ItemType<LeattyFurball>(), 1);
+			recipe.AddTile(TileID.Loom);
+			recipe.SetResult(this, 3);
+			recipe.AddRecipe();
+
+			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<CottonPlantItem>(), 1);
 			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<LeattyFurball>(), 3);
-			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<LeattyFurball>(), 1);
-			recipe.AddIngredient(ModContent.ItemType<CottonPlantItem>(), 2);
-			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<LeattyFurball>(), 2);
-			recipe.AddIngredient(ModContent.ItemType<TeddysCotton>(), 1);
-			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<LeattyFurball>(), 1);
-			recipe.AddIngredient(ModContent.ItemType<TeddysCotton>(), 2);
-			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
+			recipe.SetResult(this, 3);
 			recipe.AddRecipe();
 		}
 	}

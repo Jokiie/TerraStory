@@ -39,6 +39,14 @@ namespace TerraStory.Items.Placeable
                 recipe.AddTile(TileID.WorkBenches);
                 recipe.SetResult(this);
                 recipe.AddRecipe();
+
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.DirtBlock, 2);
+            recipe.AddIngredient(ItemID.Wood, 2);
+            recipe.AddIngredient(ModContent.ItemType<CottonPlantSeedItem>(), 2);
+            recipe.AddTile(TileID.WorkBenches);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
     }
 }

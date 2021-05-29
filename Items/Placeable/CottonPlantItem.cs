@@ -9,7 +9,7 @@ namespace TerraStory.Items.Placeable
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Cotton plant");
-            Tooltip.SetDefault("This plant can be woven with the loom.");
+            Tooltip.SetDefault("Can be woven with the loom.");
         }
         public override void SetDefaults()
         {

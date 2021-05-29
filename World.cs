@@ -23,6 +23,7 @@ using TerraStory.Tiles.Ambiance;
 using System.Configuration;
 using TerraStory.NPCs.TownNPCs;
 using TerraStory.Items.Weapons.Thief.PinkRabbitPuppet;
+using TerraStory.Tiles.Plants;
 
 namespace TerraStory
 {
@@ -151,8 +152,63 @@ namespace TerraStory
 
 			tasks.Insert(shiniesIndex + 12, new PassLegacy("Ludibrium", GenLudibrium));
 			tasks.Insert(shiniesIndex + 11, new PassLegacy("Ludibrium Tower", GenerateStructure));
-			tasks.Insert(shiniesIndex + 13, new PassLegacy("Generating toys", GenChests));
-			tasks.Insert(shiniesIndex + 15, new PassLegacy("ManoShell",
+			tasks.Insert(shiniesIndex + 13, new PassLegacy("Generating Toys", GenChests));
+			tasks.Insert(shiniesIndex + 52, new PassLegacy("Generating Cottons",
+				delegate (GenerationProgress progress)
+				{
+					progress.Message = "Generating Cottons..";
+
+					int amountToGen = 100; //In case of custom world size??
+					if (Main.maxTilesX == 4200)
+					{
+						amountToGen = WorldGen.genRand.Next(50, 70);
+					}
+					else if (Main.maxTilesX == 6400)
+					{
+						amountToGen = WorldGen.genRand.Next(60, 80);
+					}
+					else if (Main.maxTilesX == 8400)
+					{
+						amountToGen = WorldGen.genRand.Next(70, 100);
+					}
+
+					for (int i = 0; i < amountToGen; i++)
+					{
+						bool placeSuccessful = false;
+						while (!placeSuccessful)
+						{
+							int ShellposX = WorldGen.genRand.Next(0, Main.maxTilesX);
+							int ShellposY = WorldGen.genRand.Next(Main.spawnTileY, Main.spawnTileY + 150);
+							if (Main.maxTilesY == 1200)
+							{
+								ShellposY = WorldGen.genRand.Next(Main.spawnTileY, Main.spawnTileY + 420);
+							}
+							else if (Main.maxTilesY == 1800)
+							{
+								ShellposY = WorldGen.genRand.Next(Main.spawnTileY, Main.spawnTileY + 620);
+							}
+							else if (Main.maxTilesY == 2400)
+							{
+								ShellposY = WorldGen.genRand.Next(Main.spawnTileY, Main.spawnTileY + 820);
+							}
+							Tile tile = Main.tile[ShellposX, ShellposY];
+							if (!(tile.type == TileID.Dirt
+								|| tile.type == TileID.Grass
+								|| tile.type == TileID.Mud))
+							{
+								continue;
+							}
+							if (ShellposY >= Main.worldSurface)
+							{
+								continue;
+							}
+							WorldGen.PlaceTile(ShellposX, ShellposY, TileType<CottonPlantTile>());
+							placeSuccessful = tile.active() && tile.type == TileType<CottonPlantTile>();
+						}
+					}
+				}));
+
+				tasks.Insert(shiniesIndex + 15, new PassLegacy("ManoShell",
 				delegate (GenerationProgress progress)
 				{
 					progress.Message = "Generating things..";
@@ -180,7 +236,7 @@ namespace TerraStory
 							int ShellposY = WorldGen.genRand.Next(Main.spawnTileY, Main.spawnTileY + 150);
 							if (Main.maxTilesY == 1200)
 							{
-								ShellposY = WorldGen.genRand.Next(Main.spawnTileY, Main.spawnTileY + 100);
+								ShellposY = WorldGen.genRand.Next(Main.spawnTileY - 70 , Main.spawnTileY + 110);
 							}
 							else if (Main.maxTilesY == 1800)
 							{

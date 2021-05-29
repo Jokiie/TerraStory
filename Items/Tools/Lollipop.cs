@@ -10,7 +10,7 @@ namespace TerraStory.Items.Tools
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault(" Lolli-Pickaxe");
+			DisplayName.SetDefault(" Lolli-Axe");
 		}
 
 		public override void SetDefaults() 

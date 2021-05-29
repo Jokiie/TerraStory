@@ -10,7 +10,7 @@ namespace TerraStory.Items.Tools
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Spoon-Axe");
+			DisplayName.SetDefault("Pick-Spoon");
 		}
 
 		public override void SetDefaults() {
