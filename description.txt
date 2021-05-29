@@ -69,7 +69,18 @@ Jokie.
 ----------------------------------------------------------------
 Changelog
 
-May, 26, 2021
+
+ May , 28, 2021 v.1.0.7
+
+ -Cotton plants now grow on surface during world generation,but currently don't grow back . Please wait some days to give
+  these the time to grow enough for harvesting !
+
+ -Recipe for cotton balls changed from "3 cottonplant for 1 cotton ball" for "1 cottonplant for 3 cottons balls".
+  Grow them in their plantbox to get your new gear fast ! ( 2 dirts blocks, 2 woods, 2 cotton plant seeds)
+
+  -Added the Flyeye mob to compensate for the lacks of Devils eyes during night. They drop Lens and black lens as well.
+
+May, 26, 2021 v.1.0.5 & v.1.0.6
 
 -Moved some music from TerraStoryMusic pack2 to TerraStory , as an attempt to fix Ludibrium music 
  not playing while raining or underground. (Fixed !)
@@ -102,16 +113,6 @@ May, 26, 2021
 
 -Complete rework for the Starter Staff for magician. The projectile rotate while traveling to
  the target and makes dusts & sounds while expiring / on hit npc + mana usage increased from 1 to 2.
- 
- May , 28, 2021
-
- -Cotton plants now grow on surface during world generation,but currently don't grow back . Please wait some days to give
-  these the time to grow enough for harvesting !
-
- -Recipe for cotton balls changed from "3 cottonplant for 1 cotton ball" for "1 cottonplant for 3 cottons balls".
-  Grow them in their plantbox to get your new gear fast ! ( 2 dirts blocks, 2 woods, 2 cotton plant seeds)
-
-  -Added the Flyeye mob to compensate for the lacks of Devils eyes during night. They drop Lens and black lens as well.
 
 
 ----------------------------------------------------------------
