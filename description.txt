@@ -70,7 +70,9 @@ Jokie.
 Changelog
 
 
- May , 28, 2021 v.1.0.7
+ May , 28, 2021
+
+ -Fixed rain music.
 
  -Cotton plants now grow on surface during world generation,but currently don't grow back . Please wait some days to give
   these the time to grow enough for harvesting !
@@ -80,7 +82,7 @@ Changelog
 
   -Added the Flyeye mob to compensate for the lacks of Devils eyes during night. They drop Lens and black lens as well.
 
-May, 26, 2021 v.1.0.5 & v.1.0.6
+May, 26, 2021 
 
 -Moved some music from TerraStoryMusic pack2 to TerraStory , as an attempt to fix Ludibrium music 
  not playing while raining or underground. (Fixed !)
