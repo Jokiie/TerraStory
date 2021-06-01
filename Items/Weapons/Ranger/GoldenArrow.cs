@@ -30,7 +30,7 @@ namespace TerraStory.Items.Weapons.Ranger
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.GoldBar, 1);
-			recipe.AddRecipeGroup(ItemID.Wood, 10);
+			recipe.AddIngredient(ItemID.Wood, 10);
 			recipe.AddIngredient(ModContent.ItemType<MapleLeaf>(), 1);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this, 70);

@@ -42,7 +42,7 @@ namespace TerraStory.Items.Weapons.Cannoneer
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
 
-			if (type == ProjectileType<NoviceBombProj>() || type == ProjectileType<IntermediateBombProj>() || type == ProjectileType<ExpertBombProj>());
+			if (type == ProjectileType<NoviceBombProj>() || type == ProjectileType<IntermediateBombProj>() || type == ProjectileType<ExpertBombProj>())
 			{
 				type = ProjectileType<BigHugeGiganticCannonBall>();
 				speedX = speedX / 5;

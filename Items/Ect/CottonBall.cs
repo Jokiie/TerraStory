@@ -26,13 +26,7 @@ namespace TerraStory.Items.Ect
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<CottonPlantItem>(), 3);
 			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<TeddysCotton>(), 3);
-			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
+			recipe.SetResult(this, 3);
 			recipe.AddRecipe();
 
 			recipe = new ModRecipe(mod);
@@ -43,12 +37,6 @@ namespace TerraStory.Items.Ect
 
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<LeattyFurball>(), 1);
-			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this, 3);
-			recipe.AddRecipe();
-
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<CottonPlantItem>(), 1);
 			recipe.AddTile(TileID.Loom);
 			recipe.SetResult(this, 3);
 			recipe.AddRecipe();

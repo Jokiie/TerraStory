@@ -69,6 +69,15 @@ Jokie.
 ----------------------------------------------------------------
 Changelog
 
+May, 31, 2021
+
+- Fixed Wooden Shield's recipe. (10 wood, 1 maple leaf).
+
+- Fixed Charcoal recipes . 10 woods in any fire sources(Fireplace,Furnaces,Campfire).
+
+- Added a recipe for leather. 1 crocoskin for 3 leathers.
+
+- Fixed all arrows recipes to cost wood instead of irons.
 
  May , 28, 2021
 
@@ -127,6 +136,8 @@ May, 26, 2021
  because my towers are so bigs.. You just need to relaunch the game. Sorry until I find how to fix this :(.
 ----------------------------------------------------------------
 Knows requests // To do list // Working on it 
+
+- Balance armors and weapons for all classes
 
 -Reset buttons for stats
 

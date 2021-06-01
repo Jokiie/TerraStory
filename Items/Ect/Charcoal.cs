@@ -23,19 +23,19 @@ namespace TerraStory.Items.Ect
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup(ItemID.Wood, 10);
+			recipe.AddIngredient(ItemID.Wood, 10);
 			recipe.AddTile(TileID.Fireplace);
 			recipe.SetResult(this, 5);
 			recipe.AddRecipe();
 
 			recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup(ItemID.Wood, 10);
+			recipe.AddIngredient(ItemID.Wood, 10);
 			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this, 5);
 			recipe.AddRecipe();
 
 			recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup(ItemID.Wood, 10);
+			recipe.AddIngredient(ItemID.Wood, 10);
 			recipe.AddTile(TileID.Campfire);
 			recipe.SetResult(this, 5);
 			recipe.AddRecipe();

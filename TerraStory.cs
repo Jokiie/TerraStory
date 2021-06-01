@@ -453,15 +453,15 @@ namespace TerraStory
                 if (!Main.dayTime)
                 {
                     if (Main.player[Main.myPlayer].ZoneOverworldHeight
-                //&& Main.player[Main.myPlayer].active 
-                && Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium
-                && !Main.player[Main.myPlayer].ZoneDesert
-                && !Main.player[Main.myPlayer].ZoneJungle
-                && !Main.player[Main.myPlayer].ZoneSnow
-                && !Main.player[Main.myPlayer].ZoneCrimson
-                && !Main.player[Main.myPlayer].ZoneCorrupt
-                && !Main.player[Main.myPlayer].ZoneHoly)
-                {
+                    //&& Main.player[Main.myPlayer].active 
+                    && Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium
+                    && !Main.player[Main.myPlayer].ZoneDesert
+                    && !Main.player[Main.myPlayer].ZoneJungle
+                    && !Main.player[Main.myPlayer].ZoneSnow
+                    && !Main.player[Main.myPlayer].ZoneCrimson
+                    && !Main.player[Main.myPlayer].ZoneCorrupt
+                    && !Main.player[Main.myPlayer].ZoneHoly)
+                    {
                         music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/LudibriumNT");
                         priority = MusicPriority.BiomeLow;
                     }
@@ -507,14 +507,14 @@ namespace TerraStory
                     && !Main.player[Main.myPlayer].ZoneHoly
                     && !Main.player[Main.myPlayer].ZoneDesert
                     && !Main.player[Main.myPlayer].ZoneSkyHeight
-                    && !Main.player[Main.myPlayer].ZoneSnow
-                    && Main.player[Main.myPlayer].ZoneRain)
+                    && !Main.player[Main.myPlayer].ZoneSnow)
                     {
                         music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/MissingYouRain");
                         priority = MusicPriority.Event;
                     }
                 }
                 if (Main.player[Main.myPlayer].ZoneRockLayerHeight)
+                {
                     if (!Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium
                     && !Main.player[Main.myPlayer].ZoneJungle
                     && !Main.player[Main.myPlayer].ZoneSnow
@@ -526,14 +526,15 @@ namespace TerraStory
                         music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/AbandonnedMines");
                         priority = MusicPriority.Environment;
                     }
+                }
                 if (!Main.dayTime)
                 {
                     if (!Main.player[Main.myPlayer].GetModPlayer<TerraStoryPlayer>().ZoneLudibrium
-                && Main.player[Main.myPlayer].ZoneOverworldHeight
-                && !Main.player[Main.myPlayer].ZoneJungle
-                && !Main.player[Main.myPlayer].ZoneSnow
-                && !Main.player[Main.myPlayer].ZoneCrimson
-                && !Main.player[Main.myPlayer].ZoneCorrupt)
+                    && Main.player[Main.myPlayer].ZoneOverworldHeight
+                    && !Main.player[Main.myPlayer].ZoneJungle
+                    && !Main.player[Main.myPlayer].ZoneSnow
+                    && !Main.player[Main.myPlayer].ZoneCrimson
+                    && !Main.player[Main.myPlayer].ZoneCorrupt)
                     //&& !Main.player[Main.myPlayer].ZoneHoly
                     {
                         music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/HenesysShadow");
@@ -549,7 +550,8 @@ namespace TerraStory
                     && !Main.player[Main.myPlayer].ZoneSnow
                     && !Main.player[Main.myPlayer].ZoneCrimson
                     && !Main.player[Main.myPlayer].ZoneCorrupt
-                    && !Main.player[Main.myPlayer].ZoneHoly)
+                    && !Main.player[Main.myPlayer].ZoneHoly
+                    && !Main.player[Main.myPlayer].ZoneRain)
                     {
                         music = (this).GetSoundSlot(SoundType.Music, "Sounds/Music/HenesysFields");
                         priority = MusicPriority.BiomeLow;

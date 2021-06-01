@@ -20,5 +20,13 @@ namespace TerraStory.Items.Ect
 			item.rare = ItemRarityID.Blue;
 			item.material = true;
 		}
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ModContent.ItemType<CrocoSkin>(), 12);
+			recipe.AddTile(TileID.WorkBenches);
+			recipe.SetResult(ItemID.Leather, 3);
+			recipe.AddRecipe();
+		}
 	}
 }
