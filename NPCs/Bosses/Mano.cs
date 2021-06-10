@@ -66,7 +66,6 @@ namespace TerraStory.NPCs.Bosses
 			else
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.GoldCoin, Main.rand.Next(0, 1));
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Mushroom, Main.rand.Next(1, 20));
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("RedSnailShell"), 1);
                 Item.NewItem((int)npc.position.X + 20, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("RedSnailShell"), 1);
                 Item.NewItem((int)npc.position.X + 50, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("RedSnailShell"), 1);
@@ -88,9 +87,7 @@ namespace TerraStory.NPCs.Bosses
 
 		public override void FindFrame(int frameHeight)
 		{
-            // This makes the sprite flip horizontally in conjunction with the npc.direction.
             npc.spriteDirection = npc.direction;
-            // Determines the animation speed . positive value ex: 0.5f = higher speed
             npc.frameCounter -= -11.9f;
             npc.frameCounter %= Main.npcFrameCount[npc.type];
             int frame = (int)npc.frameCounter;
@@ -108,7 +105,7 @@ namespace TerraStory.NPCs.Bosses
             float distance = npc.Distance(Main.player[npc.target].Center);
             if (distance >= 300 && !Collision.CanHitLine(npc.Center, 0, 0, Main.player[npc.target].Center, 0, 0))
             {
-                Main.player[npc.target].AddBuff(BuffID.Slow, 120, true);
+                Main.player[npc.target].AddBuff(BuffID.Slow, 2, false);
             }
             if (distance == 300 && !Collision.CanHitLine(npc.Center, 0, 0, Main.player[npc.target].Center, 0, 0))
             {

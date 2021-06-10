@@ -69,6 +69,17 @@ Jokie.
 ----------------------------------------------------------------
 Changelog
 
+June, 09, 2021
+
+- Pixies now spawns after squeletron has been defeated.
+
+- New crafting tile : The sewing machine. Recipe : 10 iron or lead bar. Will be used for all early new armors for thief and cannoneer. Maybe for mage too. (Currently reworking all new armors's recipes and crafting materials. This 
+ will be added in a future update).
+
+- Added the linen ball. recipe : 1 hay 
+
+- Added Blinkroot thread. recipe : 1 blinkroot
+
 May, 31, 2021
 
 - Fixed Wooden Shield's recipe. (10 wood, 1 maple leaf).

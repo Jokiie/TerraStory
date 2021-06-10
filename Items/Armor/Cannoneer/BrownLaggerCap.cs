@@ -32,8 +32,11 @@ namespace TerraStory.Items.Armor.Cannoneer
 		public override void UpdateArmorSet(Player player)
 		{
 
+			CannoneerPlayer modPlayer = CannoneerPlayer.ModPlayer(player);
+			modPlayer.cannonDamageAdd += 0.01f;
 			player.statDefense += 1;
-			player.setBonus = "Increase defense by 1. ";
+			player.setBonus = "Increase defense by 1 \n" +
+				"increase cannon damage by 1% ";
 
 		}
 
@@ -47,7 +50,7 @@ namespace TerraStory.Items.Armor.Cannoneer
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<CottonBall>(), 1);
 			recipe.AddIngredient(ModContent.ItemType<MapleThread>(), 1);
-			recipe.AddTile(TileID.Loom);
+			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

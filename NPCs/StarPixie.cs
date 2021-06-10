@@ -44,6 +44,7 @@ namespace TerraStory.NPCs
 		{
 			Player player = spawnInfo.player;
 			return !Main.dayTime
+		    && NPC.downedBoss3
 			&& Main.hardMode
 			&& !spawnInfo.invasion
 			&& !player.GetModPlayer<TerraStoryPlayer>().ZoneLudibrium

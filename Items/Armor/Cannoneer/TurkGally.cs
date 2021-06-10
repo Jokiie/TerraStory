@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 using TerraStory.Items.Ect;
+using TerraStory.Tiles;
 
 namespace TerraStory.Items.Armor.Cannoneer
 {
@@ -39,8 +40,8 @@ namespace TerraStory.Items.Armor.Cannoneer
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<CottonBall>(), 8);
-			recipe.AddIngredient(ModContent.ItemType<MapleThread>(), 1);
-			recipe.AddTile(TileID.Loom);
+			recipe.AddIngredient(ModContent.ItemType<BlinkrootThread>(), 3);
+			recipe.AddTile(ModContent.TileType<IronSewingMachineTile>());
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

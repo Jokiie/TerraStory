@@ -40,7 +40,7 @@ namespace TerraStory.Items.Armor.Cannoneer
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<CottonBall>(), 10);
-			recipe.AddIngredient(ModContent.ItemType<MapleThread>(), 2);
+			recipe.AddIngredient(ModContent.ItemType<BlinkrootThread>(), 3);
 			recipe.AddTile(TileID.Loom);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

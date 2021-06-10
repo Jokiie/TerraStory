@@ -54,8 +54,9 @@ namespace TerraStory.Items.Boss
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.FallenStar, 10);
-			recipe.AddIngredient(ModContent.ItemType<Items.Ect.LunarPixieMoonPiece>(), 10);
-			recipe.AddIngredient(ModContent.ItemType<Items.Ect.LusterPixieSunPiece>(), 10);
+			recipe.AddIngredient(ModContent.ItemType<Items.Ect.LunarPixieMoonPiece>(), 3);
+			recipe.AddIngredient(ModContent.ItemType<Items.Ect.LusterPixieSunPiece>(), 3);
+			recipe.AddIngredient(ModContent.ItemType<Items.Ect.StarPiece>(), 3);
 			recipe.AddTile(TileID.Hellforge);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

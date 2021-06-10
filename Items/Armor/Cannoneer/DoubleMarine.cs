@@ -3,6 +3,8 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 using TerraStory.Items.Ect;
+using TerraStory.Items.Weapons.Cannoneer;
+using TerraStory.Tiles;
 
 namespace TerraStory.Items.Armor.Cannoneer
 {
@@ -12,7 +14,7 @@ namespace TerraStory.Items.Armor.Cannoneer
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Double Marine");
-			Tooltip.SetDefault("Set with the 'Beige Carribean overall.");
+			Tooltip.SetDefault("Set with the 'Beige Carribean' overall.");
 		}
 
 		public override void SetDefaults()
@@ -31,8 +33,11 @@ namespace TerraStory.Items.Armor.Cannoneer
 
 		public override void UpdateArmorSet(Player player)
 		{
+			CannoneerPlayer modPlayer = CannoneerPlayer.ModPlayer(player);
+			modPlayer.cannonDamageAdd += 0.02f;
 			player.statDefense += 2;
-			player.setBonus = " Increase defense by 2.";
+			player.setBonus = " Increase defense by 2 \n" +
+				"increase cannon damage by 2%";
 		}
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
@@ -45,8 +50,8 @@ namespace TerraStory.Items.Armor.Cannoneer
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<CottonBall>(), 2);
-			recipe.AddIngredient(ModContent.ItemType<MapleThread>(), 1);
-			recipe.AddTile(TileID.Loom);
+			recipe.AddIngredient(ModContent.ItemType<BlinkrootThread>(), 1);
+			recipe.AddTile(ModContent.TileType<IronSewingMachineTile>());
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
