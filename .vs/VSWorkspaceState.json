@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Items",
+    "\\Items\\Boss",
+    "\\NPCs",
+    "\\NPCs\\Bosses"
   ],
+  "SelectedNode": "\\TerraStory.cs",
   "PreviewInSolutionExplorer": false
 }

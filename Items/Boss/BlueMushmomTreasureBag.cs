@@ -11,11 +11,7 @@ namespace TerraStory.Items.Boss
 {
 	
 	public class BlueMushmomTreasureBag: ModItem
-	{
-		
-		public override int BossBagNPC => mod.NPCType("BlueMushmom");
-		
-		
+	{	
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Blue Mushmom Treasure Bag");
@@ -61,5 +57,6 @@ namespace TerraStory.Items.Boss
 				player.QuickSpawnItem(mod.ItemType("BigMushroom"), 1);
 			*/
 		}
+		public override int BossBagNPC => ModContent.NPCType<NPCs.Bosses.BlueMushmom>();
 	}
 }
