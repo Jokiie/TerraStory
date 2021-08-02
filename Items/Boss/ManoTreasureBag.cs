@@ -6,6 +6,7 @@ using TerraStory.Items.Weapons.Ranger;
 using TerraStory.Items.Weapons.Cannoneer.BombsAmmo;
 using TerraStory.Items.Weapons.Thief.Shurikens;
 using static Terraria.ModLoader.ModContent;
+using TerraStory.NPCs.Bosses;
 
 namespace TerraStory.Items.Boss
 {
@@ -22,12 +23,13 @@ namespace TerraStory.Items.Boss
 		{
 			item.width = 24;
 			item.height = 24;
+			item.consumable = true;
 			item.maxStack = 999;
 			item.rare = ItemRarityID.Cyan;
 			item.expert = true;
 		}
 
-		public override int BossBagNPC => mod.NPCType("Mano");
+		public override int BossBagNPC => NPCType<Mano>();
 
 		public override bool CanRightClick() 
 		{
