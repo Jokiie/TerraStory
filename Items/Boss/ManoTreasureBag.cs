@@ -23,7 +23,6 @@ namespace TerraStory.Items.Boss
 			item.width = 24;
 			item.height = 24;
 			item.maxStack = 999;
-			item.consumable = true;
 			item.rare = ItemRarityID.Cyan;
 			item.expert = true;
 		}
@@ -43,26 +42,24 @@ namespace TerraStory.Items.Boss
 
 			player.QuickSpawnItem(ItemID.LesserManaPotion, Main.rand.Next(1, 3));
 
-			player.QuickSpawnItem(mod.ItemType("BundleOfMesos"), Main.rand.Next(1, 3));
-
-			player.QuickSpawnItem(mod.ItemType("RainbowColoredSnailShell"));
+			player.QuickSpawnItem(ItemType<BundleOfMesos>(), Main.rand.Next(1, 3));
 
 			int choice = Main.rand.Next(4);
 			if (choice == 0)
 			{
-				player.QuickSpawnItem(ModContent.ItemType<Subi>(), Main.rand.Next(50, 100));
+				player.QuickSpawnItem(ItemType<Subi>(), Main.rand.Next(50, 100));
 			}
 			if (choice == 1)
 			{
-				player.QuickSpawnItem(ModContent.ItemType<NoviceBomb>(), Main.rand.Next(50, 100));
+				player.QuickSpawnItem(ItemType<NoviceBomb>(), Main.rand.Next(50, 100));
 			}
 			if (choice == 2)
 			{
-				player.QuickSpawnItem(ModContent.ItemType<Bullet>(), Main.rand.Next(50, 100));
+				player.QuickSpawnItem(ItemType<Bullet>(), Main.rand.Next(50, 100));
 			}
 			if (choice == 3)
 			{
-				player.QuickSpawnItem(ModContent.ItemType<CopperArrow>(), Main.rand.Next(50, 100));
+				player.QuickSpawnItem(ItemType<CopperArrow>(), Main.rand.Next(50, 100));
 			}
 		}
 	}
