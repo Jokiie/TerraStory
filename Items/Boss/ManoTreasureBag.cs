@@ -38,13 +38,12 @@ namespace TerraStory.Items.Boss
 		
 		public override void OpenBossBag(Player player)
 		{
-
-			player.QuickSpawnItem(ModContent.ItemType<Subi>(), Main.rand.Next(10, 100));
 			player.QuickSpawnItem(ItemID.SilverCoin, Main.rand.Next(10, 30));
 			player.QuickSpawnItem(ItemID.LesserHealingPotion, Main.rand.Next(1, 5));
 			player.QuickSpawnItem(ItemID.LesserManaPotion, Main.rand.Next(1, 3));
 			player.QuickSpawnItem(ModContent.ItemType<BundleOfMesos>(), Main.rand.Next(0, 3));
 			player.QuickSpawnItem(ModContent.ItemType<RainbowColoredSnailShell>(), 1);
+
 			int choice = Main.rand.Next(4);
 			if (choice == 0)
 				player.QuickSpawnItem(ModContent.ItemType<Subi>(), Main.rand.Next(50, 100));
