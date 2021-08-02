@@ -2,10 +2,10 @@ using System;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using TerraStory.Items.MountsSummon;
 using TerraStory.Items.Weapons.Ranger;
 using TerraStory.Items.Weapons.Cannoneer.BombsAmmo;
 using TerraStory.Items.Weapons.Thief.Shurikens;
+using static Terraria.ModLoader.ModContent;
 
 namespace TerraStory.Items.Boss
 {
@@ -34,9 +34,19 @@ namespace TerraStory.Items.Boss
 		{
 			return true;
 		}
-		
-		public override void OpenBossBag(Player player)
+
+		public override void RightClick(Player player)
 		{
+			player.QuickSpawnItem(ItemID.SilverCoin, Main.rand.Next(10, 30));
+
+			player.QuickSpawnItem(ItemID.LesserHealingPotion, Main.rand.Next(1, 5));
+
+			player.QuickSpawnItem(ItemID.LesserManaPotion, Main.rand.Next(1, 3));
+
+			player.QuickSpawnItem(mod.ItemType("BundleOfMesos"), Main.rand.Next(1, 3));
+
+			player.QuickSpawnItem(mod.ItemType("RainbowColoredSnailShell"));
+
 			int choice = Main.rand.Next(4);
 			if (choice == 0)
 			{
@@ -54,18 +64,6 @@ namespace TerraStory.Items.Boss
 			{
 				player.QuickSpawnItem(ModContent.ItemType<CopperArrow>(), Main.rand.Next(50, 100));
 			}
-
-			player.QuickSpawnItem(ItemID.SilverCoin, Main.rand.Next(10, 30));
-
-			player.QuickSpawnItem(ItemID.LesserHealingPotion, Main.rand.Next(1, 5));
-
-			player.QuickSpawnItem(ItemID.LesserManaPotion, Main.rand.Next(1, 3));
-
-			player.QuickSpawnItem(mod.ItemType("BundleOfMesos"), Main.rand.Next(1, 3));
-
-			player.QuickSpawnItem(mod.ItemType("RainbowColoredSnailShell"));
-
-
 		}
 	}
 }
