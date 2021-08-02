@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
@@ -43,6 +38,7 @@ namespace TerraStory.Items.Boss
 		
 		public override void OpenBossBag(Player player)
 		{
+
 			player.QuickSpawnItem(ModContent.ItemType<Subi>(), Main.rand.Next(10, 100));
 			player.QuickSpawnItem(ItemID.SilverCoin, Main.rand.Next(10, 30));
 			player.QuickSpawnItem(ItemID.LesserHealingPotion, Main.rand.Next(1, 5));
